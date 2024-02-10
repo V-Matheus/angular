@@ -15,4 +15,13 @@ const distancia = 100;
 const listrosConsumidos = distancia / gastoMedio;
 const valorGasto = precoCombustivel * listrosConsumidos;
 
+const precoCombustivel = 5.79;
+const gastoMedio = 10;
+const distancia = 100;
+
+const listrosConsumidos = distancia / gastoMedio;
+const valorGasto = precoCombustivel * listrosConsumidos;
+
+console.log(valorGasto.toFixed(2));
+
 console.log(valorGasto.toFixed(2));
