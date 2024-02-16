@@ -19,6 +19,7 @@ class CardNews extends HTMLElement {
 
     const linkTitle = document.createElement('a');
     linkTitle.textContent = this.getAttribute('title');
+    linkTitle.href = this.getAttribute('url');
 
     const newsContent = document.createElement('p');
     newsContent.textContent = this.getAttribute('content');
@@ -31,6 +32,8 @@ class CardNews extends HTMLElement {
     cardRight.setAttribute('class', 'cardRight');
 
     const newsImage = document.createElement('img');
+    newsImage.src = './assets/darth vaider.jpg';
+    newsImage.alt = 'Foto da notícia'
     cardRight.appendChild(newsImage);
 
     componentRoot.appendChild(cardLeft);
