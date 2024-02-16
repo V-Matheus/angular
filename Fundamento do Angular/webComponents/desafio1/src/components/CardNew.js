@@ -33,7 +33,7 @@ class CardNews extends HTMLElement {
 
     const newsImage = document.createElement('img');
     newsImage.src = './assets/darth vaider.jpg';
-    newsImage.alt = 'Foto da notícia'
+    newsImage.alt = 'Foto da notícia';
     cardRight.appendChild(newsImage);
 
     componentRoot.appendChild(cardLeft);
@@ -42,7 +42,45 @@ class CardNews extends HTMLElement {
     return componentRoot;
   }
 
-  styles() {}
+  styles() {
+    const style = document.createElement('style');
+    style.textContent = `
+  .card {
+    width: 80%;
+    border: 1px solid gray;
+    box-shadow: 9px 9px 27px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .cardLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+  }
+  
+  .cardLeft > span {
+    font-weight: 400;
+  }
+  
+  .cardLeft > a {
+    margin-top: 15px;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    
+  } 
+  
+  .cardLeft > p {
+    color: rgb(70, 70, 70);
+  }
+  
+    `;
+
+    return style;
+  }
 }
 
 customElements.define('card-news', CardNews);
