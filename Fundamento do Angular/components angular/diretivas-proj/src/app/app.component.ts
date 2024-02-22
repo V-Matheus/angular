@@ -4,6 +4,7 @@ import { CardComponent } from './card/card.component';
 import { CommonModule } from '@angular/common';
 import { CompAtributosComponent } from './comp-atributos/comp-atributos.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

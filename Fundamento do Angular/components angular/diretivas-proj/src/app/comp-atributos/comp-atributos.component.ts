@@ -1,15 +1,24 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-comp-atributos',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './comp-atributos.component.html',
   styleUrl: './comp-atributos.component.css'
 })
 export class CompAtributosComponent {
   estilo:string = 'enable'
+  corFundo:string = 'red'
+  corDaFont:string = 'blue'
+  item: string = ''
+  lista: string[] = []
+
+  adicionarLista() {
+    this.lista.push(this.item)
+  }
 
   trocar() {
     if(this.estilo === 'disabled') {
