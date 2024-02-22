@@ -19,4 +19,8 @@ export class CardComponent {
       'font'
     ]
   }
+
+  adicionar() {
+    this.produtos.push('matheus')
+  }
 }
