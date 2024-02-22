@@ -23,4 +23,8 @@ export class CardComponent {
   adicionar() {
     this.produtos.push('matheus')
   }
+
+  remover(index:number) {
+    this.produtos.splice(index, 1)
+  }
 }
