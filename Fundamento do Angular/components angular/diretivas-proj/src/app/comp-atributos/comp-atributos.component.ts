@@ -15,6 +15,7 @@ export class CompAtributosComponent {
   corDaFont:string = 'blue'
   item: string = ''
   lista: string[] = []
+  isEnableBloco: boolean = true
 
   adicionarLista() {
     this.lista.push(this.item)
