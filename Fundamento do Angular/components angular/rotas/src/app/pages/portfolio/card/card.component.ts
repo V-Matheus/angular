@@ -8,9 +8,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CardComponent {
   constructor(private activeRouter: ActivatedRoute) {
+
+    //http://localhost:4200/portfolio/{1}
     this.activeRouter.params.subscribe(
       res => console.log(res)
     )
+
+    //http://localhost:4200/portfolio/1?{name=matheus&token=123}
+      this.activeRouter.queryParams.subscribe(
+        res => console.log(res)
+      )
 
   }
 }
