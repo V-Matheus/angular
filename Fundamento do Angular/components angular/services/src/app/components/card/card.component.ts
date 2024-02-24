@@ -12,8 +12,6 @@ import { PokemonData } from '../../models/pokemonData';
 })
 export class CardComponent implements OnInit {
   pokemon: PokemonData
-  name:string = 'pikachu'
-  attributesTypes:string[] = ['FIRE', 'ROCK']
 
   constructor(private service:PokemonService) {
     this.pokemon = {
@@ -24,18 +22,23 @@ export class CardComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-      this.service.getPokemon(this.name).subscribe(
-        {
-          next: (res) => {
-        this.pokemon = {
-        id: res.id,
-        name: res.name,
-        sprites: res.sprites,
-        types: res.types
-        }
-      },
+    this.getPokemon('pikachu')
+  }
 
-        error: (err) => console.log(err),
-      })
+  getPokemon(searchName:string) {
+    this.service.getPokemon(searchName).subscribe(
+      {
+        next: (res) => {
+      this.pokemon = {
+      id: res.id,
+      name: res.name,
+      sprites: res.sprites,
+      types: res.types
+      }
+    },
+
+      error: (err) => console.log('nout Found'),
+    })
+
   }
 }

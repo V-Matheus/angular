@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { CardComponent } from './components/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonService } from './services/pokemon.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import { PokemonService } from './services/pokemon.service';
   <h1>Aula de services</h1>
   <app-card></app-card>
   <router-outlet></router-outlet>`,
-  imports: [RouterOutlet, CardComponent, HttpClientModule],
+  imports: [RouterOutlet, CardComponent, HttpClientModule, FormsModule],
   providers:[PokemonService],
   styleUrl: './app.component.css'
 })
