@@ -30,7 +30,8 @@
 }
 
 .card-stats-type {
-  color: white;
+  color: #000;
+  font-weight: bold;
   background-color: coral;
   border-radius: 5px;
   padding: 5px;
