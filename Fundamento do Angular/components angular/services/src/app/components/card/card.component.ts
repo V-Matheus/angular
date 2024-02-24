@@ -11,12 +11,17 @@ import { PokemonData } from '../../models/pokemonData';
   styleUrl: './card.component.css'
 })
 export class CardComponent implements OnInit {
-  pokemon: PokemonData | any
+  pokemon: PokemonData
   name:string = 'pikachu'
   attributesTypes:string[] = ['FIRE', 'ROCK']
 
   constructor(private service:PokemonService) {
-
+    this.pokemon = {
+      id: 0,
+      name: '',
+      sprites: {front_default: ''},
+      types: []
+    }
   }
   ngOnInit(): void {
       this.service.getPokemon(this.name).subscribe(
